@@ -47,5 +47,6 @@ def extract_lidar_data(bag_path, topic, output_folder, prefix):
 
 if __name__ == "__main__":
     bag_file = "2025-01-22-11-16-35.bag"  # 你的 bag 文件
+    #注意这里当时两个名字写反了；用ros可视化发现这个/velodyne_points才是LIDAR_TOP，这个扫描的更全
     extract_lidar_data(bag_file, "/lidar_points", "./data/LIDAR_TOP", "LIDAR_TOP")
     extract_lidar_data(bag_file, "/velodyne_points", "./data/LIDAR_FRONT", "LIDAR_FRONT")
